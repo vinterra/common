@@ -25,6 +25,7 @@ src/main/java/org/gcube/common/scan/scanners/resource/JarResourceScanner.java -t
 src/main/java/org/gcube/common/scan/scanners/resource/ResourceScanner.java -text
 src/main/java/org/gcube/common/scan/scanners/url/AbstractJarURLScanner.java -text
 src/main/java/org/gcube/common/scan/scanners/url/DirScanner.java -text
+src/main/java/org/gcube/common/scan/scanners/url/ExcludeScanner.java -text
 src/main/java/org/gcube/common/scan/scanners/url/JarFileScanner.java -text
 src/main/java/org/gcube/common/scan/scanners/url/JarJarScanner.java -text
 src/main/java/org/gcube/common/scan/scanners/url/URLScanner.java -text

@@ -19,7 +19,7 @@ public class DirScanner implements URLScanner {
 
 	@Override
 	public boolean handles(URL url) {
-		return "file".equals(url.getProtocol()) && !url.toExternalForm().contains(".jar");
+		return "file".equals(url.getProtocol()) && url.toExternalForm().endsWith("/");
 	}
 	
 	@Override
@@ -35,7 +35,7 @@ public class DirScanner implements URLScanner {
     	File dir = new File(uri.getSchemeSpecificPart());
 		
 		if (!dir.exists() || !dir.isDirectory() || !dir.canRead())
-			throw new IllegalArgumentException(dir+" does is not readable or is not a directory");
+			throw new IllegalArgumentException(dir+" is not readable or is not a directory");
 		
 		Set<ClasspathResource> resources = new HashSet<ClasspathResource>();
 		

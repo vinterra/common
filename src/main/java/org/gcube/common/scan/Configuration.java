@@ -5,6 +5,7 @@ import java.util.Set;
 
 import org.gcube.common.scan.scanners.resource.JarResourceScanner;
 import org.gcube.common.scan.scanners.resource.ResourceScanner;
+import org.gcube.common.scan.scanners.url.ExcludeScanner;
 import org.gcube.common.scan.scanners.url.DirScanner;
 import org.gcube.common.scan.scanners.url.JarFileScanner;
 import org.gcube.common.scan.scanners.url.JarJarScanner;
@@ -25,7 +26,7 @@ public class Configuration {
 	//registers known scanners
 	static {
 		//register pre-defined ones
-		register(new DirScanner(),new JarFileScanner(), new JarJarScanner());
+		register(new DirScanner(),new JarFileScanner(), new JarJarScanner(), new ExcludeScanner());
 		register(new JarResourceScanner());
 	}
 	

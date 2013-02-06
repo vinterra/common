@@ -28,7 +28,7 @@ public class ScanTest {
 		};
 		Collection<ClasspathResource> resources = scanner.scan(matcher);
 		
-		System.out.println(resources);
+		//System.out.println(resources);
 		
 		assertTrue(contains(resources,"jartest.resource","nested.jar"));
 		assertFalse(contains(resources,"innerjartest.resource"));

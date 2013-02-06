@@ -164,7 +164,7 @@ public class DefaultScanner implements ClasspathScanner {
 		final Set<URL> result = new HashSet<URL>();
 
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-		while (classLoader != null && classLoader.getParent() != null) {
+		while (classLoader != null) {
 			if (classLoader instanceof URLClassLoader) {
 				URL[] urls = ((URLClassLoader) classLoader).getURLs();
 				if (urls != null) {
@@ -175,5 +175,10 @@ public class DefaultScanner implements ClasspathScanner {
 		}
 
 		return result;
+	}
+	
+	public static void main(String[] args) {
+		
+		System.out.println(defaultClasspath());
 	}
 }
