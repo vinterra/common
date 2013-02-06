@@ -19,7 +19,7 @@ public class URLScannerTest {
 		
 		DirScanner scanner = new DirScanner();
 		
-		URL url = new URL("file:target/test-classes");
+		URL url = new URL("file:target/test-classes/");
 		
 		assertTrue(scanner.handles(url));
 		
