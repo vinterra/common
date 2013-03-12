@@ -34,13 +34,10 @@ public abstract class AbstractJarURLScanner implements URLScanner {
             if (classPath != null) {
             	Set<URL> additionals = new LinkedHashSet<URL>();
                 for (String entry : classPath.split(" ")) {
-                	URL additional = null; 
+                	
                 	try {
-                		if (URI.create(entry).getScheme()==null)
-                			additional  = new URL("file:"+entry);
-                		else
-                			additional = new URL(entry);
-                		additionals.add(additional);
+                    	if (URI.create(entry).getScheme()!=null)
+                			additionals.add(new URL(entry));
                 	}
             		catch(Exception e) {
             			log.error("cannot process Class-Path entry "+entry,e);
