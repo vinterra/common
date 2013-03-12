@@ -134,7 +134,7 @@ public class DefaultScanner implements ClasspathScanner {
 							if (matcher.match(r))
 								closure.add(r);
 					} catch (Exception e) {
-						log.error("error scanning " + resource, e);
+						log.warn("error scanning " + resource);
 					}
 
 					continue toNextResource;
