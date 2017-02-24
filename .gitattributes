@@ -31,7 +31,5 @@ src/test/java/org/acme/ResourceScannerTest.java -text
 src/test/java/org/acme/ScanTest.java -text
 src/test/java/org/acme/TestUtils.java -text
 src/test/java/org/acme/URLScannerTest.java -text
-src/test/resources/inner/innertest.jar -text
 src/test/resources/inner/innertest.resource -text
-src/test/resources/test.jar -text
 src/test/resources/test.resource -text
